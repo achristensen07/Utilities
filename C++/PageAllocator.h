@@ -1,3 +1,6 @@
+#ifndef UTILITIES_CPP_PAGE_ALLOCATOR_H
+#define UTILITIES_CPP_PAGE_ALLOCATOR_H
+
 // The following license applies to all parts of this file.
 /*************************************************
 The MIT License
@@ -179,3 +182,5 @@ void PageAllocator<ElementSize,OverheadSize>::deallocate(void* element)
 		notFullPages=page;
 	}
 }
+
+#endif
