@@ -268,7 +268,7 @@ void Assembler::imul(IntRegister reg1, IntRegister reg2)
 	rexPrefixIfNeeded(false, needsRexPrefix(reg1), false, needsRexPrefix(reg2));
 	buffer.push8(imulOpcode1);
 	buffer.push8(imulOpcode2);
-	buffer.push8(imulOpcode3 + ((reg1 % 8) << 8) + (reg2 % 8));
+	buffer.push8(imulOpcode3 + ((reg1 % 8) << 3) + (reg2 % 8));
 }
 
 void Assembler::push(ImmediateValue32 value)
